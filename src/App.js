@@ -6,10 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo, deleteTodo, editTodo } from "./store/actions";
 
 const App = () => {
-
-  const users = useSelector(state => {
+  const users = useSelector((state) => {
     console.log(state);
-    return state ?? [] 
+    return state ?? [];
   });
   const dispatch = useDispatch();
 
@@ -19,7 +18,7 @@ const App = () => {
 
   const [editing, setEditing] = useState(false);
 
-  const initialUser = { id: null, name: ""};
+  const initialUser = { id: null, name: "" };
 
   const [currentUser, setCurrentUser] = useState(initialUser);
 
